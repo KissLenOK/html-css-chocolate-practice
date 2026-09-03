@@ -1,6 +1,14 @@
 .footer {
     background-color: #1e1823;
     color: #fff;
+
+    padding: 50px 0;
+}
+
+.footer-container-top {
+    display: flex;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-slogan {
@@ -8,22 +16,35 @@
     font-size: 28px;
     line-height: 1.21;
     letter-spacing: -0.03em;
+
+    max-width: 300px;
+}
+
+.footer-container-socials {
+    margin-left: auto;
+    margin-right: 90px;
+}
+
+.footer-container-socials .socials-link {
+    background-color: #fff;
 }
 
 .footer-caption {
     font-weight: 600;
+
+    margin-bottom: 14px;
 }
 
 
 .contacts {}
 
-.contacts-caption {
-    font-weight: 600;
-}
-
 .contacts-list {}
 
 .contacts-item {}
+
+.contacts-item:not(:last-child) {
+    mangin-bottom: 4px;
+}
 
 .contacts-link {}
 
@@ -33,10 +54,22 @@
 }
 
 
-.footer-menu {}
+.footer-container-bottom {
+    padding-top: 24px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 24px;
+}
 
 .footer-menu-item {
     font-weight: 500;
+}
+
+.footer-menu-link {
+    display: block;
+    padding: 11px 0;
 }
 
 .footer-menu-link:hover,
