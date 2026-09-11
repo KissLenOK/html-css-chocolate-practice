@@ -1,37 +1,58 @@
-.made {}
+.made {
+}
 
-.made-title {}
+.made-title {
+}
 
 .made-wrapper {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .made-left-side {
-    border-radius: 16px;
-    overflow: hidden;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .made-right-side {
-    border-radius: 15px;
-    padding: 32px;
-    width: 516px;
-    background: #fff;
+  border-radius: 15px;
+  padding: 32px;
+  width: 516px;
+  background: #fff;
 }
 
-.made-ill {}
+.made-ill {
+}
 
 .made-caption {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.33;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
 
-    max-width: 350px;
-    margin-bottom: 28px;
+  max-width: 350px;
+  margin-bottom: 28px;
 }
 
-.made-list {}
+.made-list {
+}
+
+.made-item {
+  display: flex;
+  gap: 8px;
+}
 
 .made-item:not(:last-child) {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.made-item::before {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  margin-top: 5px;
 }

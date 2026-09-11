@@ -1,42 +1,63 @@
 .ingridients {
-    padding-top: 120px;
+  padding-top: 120px;
 }
 
-.ingridients-title {}
+.ingridients-title {
+}
 
 .ingridients-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 .ingridients-item {
-    width: calc((100% - 32px * 3) / 4);
-    border-radius: 15px;
-    padding: 28px 24px;
+  width: calc((100% - 32px * 3) / 4);
+  border-radius: 15px;
+  padding: 28px 24px;
+  position: relative;
 }
 
 .ingridients-item:nth-child(2n) {
-    background-color: #fff;
-    border: 1px solid #fd9222;
+  background-color: #fff;
+  border: 1px solid #fd9222;
 }
 
 .ingridients-item:nth-child(4n + 1) {
-    background-color: #fd9222;
-    color: #fff;
+  background-color: #fd9222;
+  color: #fff;
 }
 
 .ingridients-item:nth-child(4n + 3) {
-    background-color: #1e1823;
-    color: #fff;
+  background-color: #1e1823;
+  color: #fff;
+}
+
+.ingridients-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.ingridients-item:nth-child(2n) .ingridients-btn-icon {
+  color: #fd9222;
+}
+.ingridients-item:nth-child(2n + 1) .ingridients-btn-icon {
+  color: #fafafa;
 }
 
 .ingridients-ill {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .ingridients-caption {
-    font-size: inherit;
-    font-weight: 600;
-    text-transform: uppercase;
+  font-size: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
 }
