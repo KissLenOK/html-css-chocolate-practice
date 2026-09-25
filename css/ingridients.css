@@ -1,21 +1,49 @@
 .ingridients {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
-.ingridients-title {
+@media only screen and (min-width: 768px) {
+  .ingridients {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .ingridients {
+    padding-top: 120px;
+  }
 }
 
 .ingridients-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 32px;
 }
 
+@media only screen and (min-width: 768px) {
+  .ingridients-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .ingridients-item {
-  width: calc((100% - 32px * 3) / 4);
   border-radius: 15px;
-  padding: 28px 24px;
+  padding: 32px 28px 28px;
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .ingridients-item {
+    width: calc((100% - 32px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .ingridients-item {
+    width: calc((100% - 32px * 3) / 4);
+    padding: 28px 24px;
+  }
 }
 
 .ingridients-item:nth-child(2n) {
@@ -31,6 +59,12 @@
 .ingridients-item:nth-child(4n + 3) {
   background-color: #1e1823;
   color: #fff;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .ingridients-item:nth-last-child(-n + 3) {
+    display: none;
+  }
 }
 
 .ingridients-btn {
@@ -53,7 +87,15 @@
 }
 
 .ingridients-ill {
-  margin-bottom: 32px;
+  margin: 0 auto 16px;
+}
+
+@media only screen and (min-width: 1168px) {
+  .ingridients-ill {
+    margin: 0 auto 32px;
+    width: 212px;
+    height: 160px;
+  }
 }
 
 .ingridients-caption {

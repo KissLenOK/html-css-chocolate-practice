@@ -12,6 +12,8 @@
   visibility: hidden;
   pointer-events: none;
 
+  overflow-y: auto;
+
   transition: 300ms ease-in-out 300ms;
   transition-property: opacity, visibility;
 }
@@ -31,13 +33,21 @@
   transform: translateX(-50%) translateY(-70%);
   opacity: 0;
   border-radius: 15px;
-  padding: 40px;
-  min-height: 800px;
-  max-width: 518px;
+  padding: 32px 24px;
+  max-width: 312px;
+  width: 84%;
   background-color: #fafafa;
   transition: 300ms ease-in-out 0ms;
   transition-property: transform, opacity;
 }
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    max-width: 518px;
+    padding: 40px;
+  }
+}
+
 .backdrop.is-open .modal {
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
@@ -47,14 +57,21 @@
 
 .modal-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 10px;
+  right: 10px;
   padding: 0;
   background-color: transparent;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-btn {
+    top: 24px;
+    right: 24px;
+  }
 }
 
 .modal-btn-icon {
@@ -64,6 +81,13 @@
   transition-property: color;
 }
 
+@media only screen and (min-width: 768px) {
+  .modal-btn-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 .modal-btn:hover > .modal-btn-icon,
 .modal-btn:focus > .modal-btn-icon {
   color: #fd9222;
@@ -71,27 +95,44 @@
 
 .modal-caption {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 1.17;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #111;
-  width: 300px;
-  margin-bottom: 40px;
+  max-width: 300px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-caption {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 40px;
+  }
 }
 
 /* Modal form */
-.modal-form {
+.modal-form-field {
+  margin-bottom: 12px;
 }
 
-.modal-form-field {
-  margin-bottom: 18px;
+@media only screen and (min-width: 768px) {
+  .modal-form-field {
+    margin-bottom: 18px;
+  }
 }
 
 .modal-form-label {
   color: rgba(17, 17, 17, 0.7);
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-form-label {
+    margin-bottom: 8px;
+  }
 }
 
 .modal-form-wrapper {
@@ -100,10 +141,10 @@
 
 .modal-form-input {
   border: 1px solid rgba(17, 17, 17, 0.1);
-  border-radius: 12px;
-  padding: 22px 62px;
+  border-radius: 8px;
+  padding: 10px 44px;
   width: 100%;
-  height: 68px;
+  height: 48px;
 
   font-size: 18px;
   line-height: 1.33;
@@ -112,6 +153,14 @@
 
   transition: 300ms ease-out;
   transition-property: border-color;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-form-input {
+    height: 68px;
+    border-radius: 12px;
+    padding: 22px 62px;
+  }
 }
 
 .modal-form-input:focus {
@@ -130,24 +179,38 @@
   transition-property: color;
 }
 
+@media only screen and (min-width: 768px) {
+  .modal-form-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .modal-form-input:focus + .modal-form-icon {
   color: #fd9222;
 }
 
 .modal-form-comment {
   border: 1px solid rgba(17, 17, 17, 0.1);
-  border-radius: 12px;
-  padding: 22px 24px;
+  border-radius: 8px;
+  padding: 14px 18px;
   width: 100%;
-  height: 138px;
+  height: 90px;
   resize: none;
   outline: transparent;
 
   transition: 300ms ease-out;
   transition-property: border-color;
+}
 
-  font-size: 18px;
-  line-height: 1.33333;
+@media only screen and (min-width: 768px) {
+  .modal-form-comment {
+    height: 138px;
+    border-radius: 12px;
+    padding: 22px 24px;
+    font-size: 18px;
+    line-height: 1.33333;
+  }
 }
 
 .modal-form-comment:focus {
@@ -159,14 +222,26 @@
 }
 
 .modal-form-agreement {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-form-agreement {
+    margin-bottom: 40px;
+  }
 }
 
 .modal-form-policy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.17;
   color: rgba(17, 17, 17, 0.7);
 }
 
 .modal-form-checkbox {
+  flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
